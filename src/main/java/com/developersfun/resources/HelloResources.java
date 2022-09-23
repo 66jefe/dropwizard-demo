@@ -1,5 +1,7 @@
 package com.developersfun.resources;
 
+import com.developersfun.entity.HelloEntity;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -17,6 +19,6 @@ public class HelloResources {
     @Path("/saudacao")
     @Produces(MediaType.APPLICATION_JSON + CHARSET_UTF8)
     public String helloDropwizard(){
-        return "Olá mundo. Desenvolvido por Jeferson Prestes";
+        return new HelloEntity().getOla();
     }
 }
